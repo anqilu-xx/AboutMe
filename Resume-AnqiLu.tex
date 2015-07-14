@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.1 (9/2/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{anqi}{lu}{postgraduate in computer science, university of edinburgh} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+10 Ascham Court
+Edinburgh, Midlothian
+UK
+~
++44 (0) 77 4924 6558
++86 138 1641 2974
+~
+\href{mailto:marie.luanqi@gmail.com}{marine.luanqi\\@gmail.com}
+~
+\href{https://github.com/anqilu}{github.com/anqilu}
+\href{https://www.linkedin.com/in/anqilu}{linkedin.com/in/anqilu}
+\section{languages}
+english fluent
+chinese mother tongue
+\section{programming languages}
+{\color{red} $\varheartsuit$} Python
+C\#, JAVA, C, PHP
+JavaScript
+(X)HTML, CSS
+\section{databases}
+MS SQLServer
+ORACLE Database 
+MySQL database
+MongoDB database
+\section{development environment}
+Visual Studio
+Eclipse
+WING IDE
+\section{shell}
+Linux/UNIX
+Windows
+\section{editors}
+{\color{red} $\varheartsuit$}Vim
+\end{aside}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014--2015}
+{Master {\normalfont of Computer Science}}
+{University of Edinburgh, United Kingdom}
+{{\color{red} $\hookrightarrow$}thesis: profiling analysis for a new Python framework (dispel4py) for describing abstract stream-based workflows for distributed data-intensive applications\\
+{\color{red} $\hookrightarrow$}research review: GA-Based Task Scheduling Algorithms in Cloud Computing\\
+{\color{red} $\hookrightarrow$}course work: Advanced Databases; Distributed Systems; Extreme Computing; Information Theory; Introduction to Java Programming; Parallel Programming Languages and Systems; Semantic Web Systems; Software Architecture, Process, and Management
+}
+
+%------------------------------------------------
+\entry
+{2010--2014}
+{Bachelor {\normalfont of E-Commerce}}
+{Shanghai University of Finance and Economics, China}
+{
+{\color{red} $\hookrightarrow$}gpa: 3.38/4.0\\
+{\color{red} $\hookrightarrow$}course work:
+Advanced Algebra; Advanced Mathematics; Basic of Program Design(C/C++); Comprehensive and Designing Experiments(Windows App/ Web App); Computer Network; Database; Data Structure; Discrete Mathematics; Object-Oriented Program Design(Java); Operations Research; Probability Theory and Statistics
+}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{EMC\textsuperscript{2}}
+{Shanghai, China}
+{\emph{Lab Software Engineer, Intern}
+\begin{itemize}
+\item Developed and maintained LMS2 (Lab Management System II) with CakePHP framework in Linux, mainly taking part in network management module, access control module, dashboard module and user ticket module, in partnership with two colleagues.
+\item Developed web application supporting lab users, such as a random password generator and encryptor, used by Lab team, IT team and all the team managers.
+\item Supported and maintained local servers and storages in lab.
+\end{itemize}
+}
+%------------------------------------------------
+\entry
+{2013}
+{Shanghai Zhong Yan Network Technology}
+{Shanghai, China}
+{\emph{Project and Technical Support Engineer, Intern}
+\begin{itemize}
+\item Developed survey systems in Django, with (X)HTML/JavaScript/CSS on front end and Python on back end.
+\item Processed survey data with NumPy and PANDAS (Python Data Analysis Library).
+\item Managed survey data in MySQL Database and MongoDB.
+\end{itemize}
+}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{projects}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%\entry
+%{2013}
+%{SUFEEL}
+%{Shanghai University of Finance and Economics, China}
+%{Developed a website, SUFEEL(\url{http://sufeel.org}), designed for students in SUFE, where users can reserve school gymnasiums, purchase movie ticket, exchange second-hand items, and browse business around campus and submit a review on their products or services.}
+%%------------------------------------------------
+%\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{awards}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{3\textsuperscript{rd}Prize, Shanghai College Students Computer Application Contest}
+{Shanghai, China}
+{Awarded 3rd prize for SUFEEL(\url{http://sufeel.org}) web application, out of over 400 projects.}
+%------------------------------------------------
+\end{entrylist}
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{communication skills}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%%\entry
+%%{2011}
+%%{Oral Presentation}
+%%{California Business Conference}
+%{Presented the research I conducted for my Masters of Commerce degree.}
+%%------------------------------------------------
+%\entry
+%{2010}
+%{Poster}
+%{Annual Business Conference, Oregon}
+%{As part of the course work for BUS320, I created a poster analyzing several local businesses and presented this at a conference.}
+%%------------------------------------------------
+%%\end{entrylist}
+%
+%%----------------------------------------------------------------------------------------
+%%	INTERESTS SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\section{interests}
+%
+%\textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
+%
+%%----------------------------------------------------------------------------------------
+%%	PUBLICATIONS SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\section{publications}
+%
+%\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+%
+%\printbibsection{book}{books} % Print all books from the bibliography
+%
+%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+%\nocite{*}
+%\printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+%\end{refsection}
+%
+%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+%\nocite{*}
+%\printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+%\end{refsection}
+%
+%\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+%
+%\printbibsection{report}{research reports} % Print all research reports from the bibliography
+
+%----------------------------------------------------------------------------------------
+\end{document}

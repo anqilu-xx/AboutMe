@@ -1,0 +1,226 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV
+% XeLaTeX Template
+% Version 1.1 (9/2/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{friggeri-cv-cn} % Add 'print' as an option into the square bracket to remove colors from this template for printing
+
+
+\addbibresource{bibliography.bib} % Specify the bibliography file to include publications
+
+\begin{document}
+
+\header{卢}{安琪}{计算机科学研究生在读， 爱丁堡大学} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+%	SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{联系方式}
+上海市
+顺义路100弄
+58号1301室
+~
++44 77 4924 6558
++86 138 1641 2974
+~
+\href{mailto:marie.luanqi@gmail.com}{marine.luanqi\\@gmail.com}
+~
+\href{https://github.com/anqilu}{github.com/anqilu}
+\href{https://www.linkedin.com/in/anqilu}{linkedin.com/in/anqilu}
+\section{语言}
+英语 IELTS 7.5
+\section{编程语言}
+{\color{red} $\varheartsuit$} Python
+C\#, JAVA, C, PHP
+JavaScript
+(X)HTML, CSS
+\section{数据库}
+MS SQLServer
+ORACLE Database 
+MySQL database
+MongoDB database
+\section{开发环境}
+Visual Studio
+Eclipse
+WING IDE
+\section{操作系统}
+Linux/UNIX
+Windows
+\section{编辑器}
+{\color{red} $\varheartsuit$}Vim
+\end{aside}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{教育背景}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014--2015}
+{硕士学位 {\normalfont ，计算机科学}}
+{爱丁堡大学，英国}
+{
+{\color{red} $\hookrightarrow$}毕业项目:为dipel4py(支持数据密集型分布式应用的工作流框架)作性能分析，建立数据库及模型作性能评估预测\\
+{\color{red} $\hookrightarrow$}研究论文:云计算中基于遗传算法的任务分配机制\\
+{\color{red} $\hookrightarrow$}主要课程:
+高级数据库；平行编程语言及系统；分布式系统；极限计算；信息理论；语义型网络系统；软件开发架构、流程及管理
+}
+%------------------------------------------------
+\\
+%------------------------------------------------
+\entry
+{2010--2014}
+{学士学位 {\normalfont ，电子商务}}
+{上海财经大学，中国}
+{
+{\color{red} $\hookrightarrow$}GPA: 3.38/4.0\\
+{\color{red} $\hookrightarrow$}主要课程:\\
+程序设计基础；面向对象的程序设计；数据库；计算机网络；数据结构；管理信息系统；综合设计实验；高等数学；概率论与数理统计；运筹学；离散数学；高等代数
+}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{工作经验}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{EMC\textsuperscript{2}易安信信息技术研发(上海)有限公司}
+{上海，中国}
+{实验室软件工程师，实习生
+\begin{itemize}
+\item 开发与维护LMS2 (实验室管理系统II)。主要参与模块为网络管理模块，权限控制模块，仪表盘模块，用户ticket模块。 {\color{lightgray}\footnotesize CakePHP, MySQL, Apache}
+\item 开发网络应用程序，支持实验室用户的特定需求。{\color{lightgray}\footnotesize Python}
+\item 支持与维护实验室内的服务器以及存储设备软硬件。
+\end{itemize}
+}
+%------------------------------------------------
+\\
+%------------------------------------------------
+\entry
+{2013}
+{上海众言网络科技有限公司}
+{上海，中国}
+{项目技术支持工程师，实习生
+\begin{itemize}
+\item 根据客户需求，开发定制的调研系统。{\color{lightgray}\footnotesize Django}
+\item 分析与处理调研数据。{\color{lightgray}\footnotesize NumPy, PANDAS}
+\item 管理调研数据。{\color{lightgray}\footnotesize MongoDB}
+\end{itemize}
+}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{projects}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%\entry
+%{2013}
+%{SUFEEL}
+%{Shanghai University of Finance and Economics, China}
+%{Developed a website, SUFEEL(\url{http://sufeel.org}), designed for students in SUFE, where users can reserve school gymnasiums, purchase movie ticket, exchange second-hand items, and browse business around campus and submit a review on their products or services.}
+%%------------------------------------------------
+%\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{获奖情况}
+
+\begin{entrylist}
+%------------------------------------------------
+\entry
+{2014}
+{三等奖, 上海市大学生计算机应用能力大赛}
+{上海，中国}
+{作品SUFEEL网站(\url{http://sufeel.org})在最终逾400件参赛作品中获得三等奖。{\color{lightgray}\footnotesize C\#.net, Microsoft SQL Server, IIS}}
+%------------------------------------------------
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+%	COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{communication skills}
+%
+%\begin{entrylist}
+%%------------------------------------------------
+%%\entry
+%%{2011}
+%%{Oral Presentation}
+%%{California Business Conference}
+%{Presented the research I conducted for my Masters of Commerce degree.}
+%%------------------------------------------------
+%\entry
+%{2010}
+%{Poster}
+%{Annual Business Conference, Oregon}
+%{As part of the course work for BUS320, I created a poster analyzing several local businesses and presented this at a conference.}
+%%------------------------------------------------
+%%\end{entrylist}
+%
+%%----------------------------------------------------------------------------------------
+%%	INTERESTS SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\section{interests}
+%
+%\textbf{professional:} data analysis, company profiling, risk analysis, economics, web design, web app creation, software design, marketing \textbf{personal:} piano, chess, cooking, dancing, running
+%
+%%----------------------------------------------------------------------------------------
+%%	PUBLICATIONS SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\section{publications}
+%
+%\printbibsection{article}{article in peer-reviewed journal} % Print all articles from the bibliography
+%
+%\printbibsection{book}{books} % Print all books from the bibliography
+%
+%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" but not containing "keyword=france"
+%\nocite{*}
+%\printbibliography[sorting=chronological, type=inproceedings, title={international peer-reviewed conferences/proceedings}, notkeyword={france}, heading=subbibliography]
+%\end{refsection}
+%
+%\begin{refsection} % This is a custom heading for those references marked as "inproceedings" and containing "keyword=france"
+%\nocite{*}
+%\printbibliography[sorting=chronological, type=inproceedings, title={local peer-reviewed conferences/proceedings}, keyword={france}, heading=subbibliography]
+%\end{refsection}
+%
+%\printbibsection{misc}{other publications} % Print all miscellaneous entries from the bibliography
+%
+%\printbibsection{report}{research reports} % Print all research reports from the bibliography
+
+%----------------------------------------------------------------------------------------
+\end{document}
