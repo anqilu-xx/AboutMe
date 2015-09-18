@@ -1,4 +1,4 @@
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
+\ProvidesClass{friggeri-cv-cn}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
@@ -52,7 +52,7 @@
 % Main Fonts %
 %%%%%%%%%%%%%%
 \RequirePackage{fontspec}
-\setmainfont[Color=textcolor]{Ubuntu-Regular}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Ubuntu-Light}
 
 %%%%%%%%%
 % Chinese Characters Fonts %
@@ -61,12 +61,12 @@
 %\RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newCJKfontfamily\bodyfont[]{Microsoft JhengHei-Regular}
-\newCJKfontfamily\thinfont[]{Microsoft JhengHei-Light}
-\newCJKfontfamily\headingfont[]{Microsoft JhengHei-Bold}
+\newCJKfontfamily\bodyfont[]{STSong-Regular}
+\newCJKfontfamily\thinfont[]{STSong-Regular}
+\newCJKfontfamily\headingfont[]{STHeiti-Light}
 
 \defaultCJKfontfeatures{Mapping=tex-text}
-\setCJKmainfont[Color=textcolor]{Microsoft JhengHei}
+\setCJKmainfont[Color=textcolor]{STSong-Regular}
 
 %\setmathfont{XITS Math}
 
@@ -318,18 +318,18 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1cm,nohead,nofoot]{geometry}
+\RequirePackage[hidelinks]{hyperref}
 \hypersetup{
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black}
-}
+	colorlinks=false,       
+	linkcolor=red,          
+	citecolor=red,        
+	filecolor=red,      
+	urlcolor = red}
 
 \RequirePackage{enumitem}
 \setlist[itemize]{leftmargin=*}
-    
+
 % A fix for \href{}{} colors not working with fontspec
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
