@@ -61,12 +61,12 @@
 %\RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newCJKfontfamily\bodyfont[]{STSong-Regular}
-\newCJKfontfamily\thinfont[]{STSong-Regular}
-\newCJKfontfamily\headingfont[]{STHeiti-Light}
+\newCJKfontfamily\bodyfont[]{WenQuanYi Micro Hei}
+\newCJKfontfamily\thinfont[]{WenQuanYi Micro Hei}
+\newCJKfontfamily\headingfont[]{WenQuanYi Micro Hei}
 
 \defaultCJKfontfeatures{Mapping=tex-text}
-\setCJKmainfont[Color=textcolor]{STSong-Regular}
+\setCJKmainfont[Color=textcolor]{WenQuanYi Micro Hei}
 
 %\setmathfont{XITS Math}
 
@@ -290,14 +290,6 @@
     \newunit%
   }
   \par\vspace{0.3\baselineskip}
-}
-
-\DeclareNameFormat{author}{%
-  \small\addfontfeature{Color=lightgray}%
-  \ifblank{#3}{}{#3\space}#1%
-  \ifthenelse{\value{listcount}<\value{liststop}}
-    {\addcomma\space}
-    {}%
 }
 
 \newcommand{\printbibsection}[2]{
