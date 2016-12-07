@@ -39,12 +39,12 @@
   \colorlet{fillheader}{gray}
   \colorlet{header}{white}
 \fi
-\colorlet{textcolor}{gray}
+\colorlet{textcolor}{white}
 \colorlet{headercolor}{gray}
 
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
 % Chinese Characters %
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{xeCJK}
 
@@ -52,20 +52,19 @@
 % Main Fonts %
 %%%%%%%%%%%%%%
 \RequirePackage{fontspec}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Ubuntu-Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Arial}
 
 %%%%%%%%%
 % Chinese Characters Fonts %
 %%%%%%%%%
 
-%\RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newCJKfontfamily\bodyfont[]{WenQuanYi Micro Hei}
+\newCJKfontfamily\bodyfont[]{WenQuanYi Micro Hei Mono}
 \newCJKfontfamily\thinfont[]{WenQuanYi Micro Hei}
 \newCJKfontfamily\headingfont[]{WenQuanYi Micro Hei}
 
-\defaultCJKfontfeatures{Mapping=tex-text}
+%\defaultCJKfontfeatures{Mapping=tex-text}
 \setCJKmainfont[Color=textcolor]{WenQuanYi Micro Hei}
 
 %\setmathfont{XITS Math}
@@ -187,121 +186,43 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=verbose, maxnames=99, sorting=ydnt, backend=biber, firstinits=true]{biblatex}
 
-\DeclareFieldFormat[article]{title}{#1\par}
-\DeclareFieldFormat[book]{title}{#1\par}
-\DeclareFieldFormat[inproceedings]{title}{#1\par}
-\DeclareFieldFormat[misc]{title}{#1\par}
-\DeclareFieldFormat[report]{title}{#1\par}
+\DeclareFieldFormat[patent]{title}{#1\par}
 
-\DeclareBibliographyDriver{article}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \usebibmacro{journal+issuetitle}%
-    \setunit{\space}%
-    \printfield{pages}%
-    \newunit%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+\DeclareBibliographyDriver{patent}{%
+	\printfield{title}%
+	\newblock%
+	\footnotesize\addfontfeature{Color=lightgray}\printnames{author}%
+	\par%
+	\newblock%
+	{%
+		\footnotesize\addfontfeature{Color=lightgray}\itshape%
+		\printfield{number}%
+		\setunit*{\addcomma\space}%
+		\printfield{year}%
+		\setunit*{\addcomma\space}%
+		\printfield{holder}%
+		\setunit*{\addcomma\space}%
+		\printfield{url}%
+	}
+	\par\vspace{0.3\baselineskip}
 }
 
-\DeclareBibliographyDriver{book}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printlist{publisher}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
+\DeclareFieldFormat{url}{\addcolon\space\bibstring{<}\url{#1}\bibstring{>}}
+
+\renewcommand{\UrlFont}{\small\rm}
+
+\defbibheading{bibheading}[\bibname]{%
+	\subsubsection*{#1}
+	\markboth{#1}{#1}
 }
 
-
-\DeclareBibliographyDriver{inproceedings}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}%
-    \printfield{booktitle}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\DeclareBibliographyDriver{misc}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{booktitle}%
-    \setunit*{\addcomma\space}%
-    \printfield{note}%
-    \setunit*{\addcomma\space}%
-    \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printlist{location}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\DeclareBibliographyDriver{report}{%
-  \printfield{title}%
-  \newblock%
-  \printnames{author}%
-  \par%
-  \newblock%
-  {%
-    \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{type}%
-    \setunit{\space}%
-    \printfield{number}%
-    \setunit{\addcomma\space}%
-    \printfield{year}%
-    \newunit%
-  }
-  \par\vspace{0.3\baselineskip}
-}
-
-\newcommand{\printbibsection}[2]{
-  \begin{refsection}
-    \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
-  \end{refsection}
-}
-
-\DeclareSortingScheme{chronological}{
-  \sort[direction=descending]{\field{year}}
-  \sort[direction=descending]{\field{month}}
+\newcommand{\printbibsection}[1]{
+	\begin{refsection}
+		\nocite{*}
+		\printbibliography[type={#1}, heading=none]
+	\end{refsection}
 }
 
 
@@ -310,7 +231,7 @@
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=1cm,nohead,nofoot]{geometry}
+\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=0.5cm,nohead,nofoot]{geometry}
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
 	colorlinks=false,       

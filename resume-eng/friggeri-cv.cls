@@ -174,14 +174,14 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt, backend=biber]{biblatex}
+\RequirePackage[style=verbose, maxnames=99, sorting=ydnt, backend=biber, firstinits=true]{biblatex}
 
 \DeclareFieldFormat[patent]{title}{#1\par}
 
 \DeclareBibliographyDriver{patent}{%
   \printfield{title}%
   \newblock%
-  \printnames{author}%
+  \footnotesize\addfontfeature{Color=lightgray}\printnames{author}%
   \par%
   \newblock%
   {%
@@ -189,24 +189,17 @@
     \printfield{number}%
     \setunit*{\addcomma\space}%
     \printfield{year}%
-    \setunit{\addcomma\space}%
-    \printfield{OPTholder}%
-    \setunit{\addcomma\space}%
+    \setunit*{\addcomma\space}%
+    \printfield{holder}%
+    \setunit*{\addcomma\space}%
+    \printfield{url}%
   }
   \par\vspace{0.3\baselineskip}
 }
 
-\newbibmacro{name:newformat}{%
-   \small\addfontfeature{Color=lightgray}
-   \namepartfamily  % #1->\namepartfamily, #2->\namepartfamilyi
-   \space
-   \namepartgiveni  % #3->\namepartgiven,  #4->\namepartgiveni
-   }
+\DeclareFieldFormat{url}{\addcolon\space\bibstring{<}\url{#1}\bibstring{>}}
 
-\DeclareNameFormat{author}{%
-  \nameparts{#1}
-  \usebibmacro{name:newformat}
-}
+\renewcommand{\UrlFont}{\small\rm}
 
 \defbibheading{bibheading}[\bibname]{%
    \subsubsection*{#1}
@@ -216,14 +209,8 @@
 \newcommand{\printbibsection}[1]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, heading=none]
+    \printbibliography[type={#1}, heading=none]
   \end{refsection}
-}
-
-
-\DeclareSortingScheme{chronological}{
-  \sort[direction=descending]{\field{year}}
-  \sort[direction=descending]{\field{month}}
 }
 
 
