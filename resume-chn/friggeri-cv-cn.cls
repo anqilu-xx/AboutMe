@@ -151,9 +151,9 @@
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
-    \setstretch{1.3}
-    \textbf{#2}%
+  #1&\parbox[t]{11.3cm}{%  create a box, with 11.8cm width
+    \setstretch{1.3} % row space
+    \textbf{#2} % bold font
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
